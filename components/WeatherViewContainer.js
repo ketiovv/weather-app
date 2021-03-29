@@ -6,8 +6,6 @@ import NormalView from './NormalView';
 
 
 const WeatherViewContainer = (props) => {
-    const API_ROUTE = `http://api.openweathermap.org/data/2.5/weather?q=${"Chybie"}&appid=${API_KEY}&units=metric`;
-
     const [isLoading, setIsLoading] = useState(true);
     const [temperature, setTemperature] = useState(0);
     const [weatherLocation, setWeatherLocation] = useState("");
@@ -18,8 +16,8 @@ const WeatherViewContainer = (props) => {
     const [description, setDescription] = useState("");
     const [shortDescription, setShortDescription] = useState("");
 
-
     const fetchWeather = () => {
+      const API_ROUTE = `http://api.openweathermap.org/data/2.5/weather?q=${props.selectedLocation}&appid=${API_KEY}&units=metric`;
       fetch(API_ROUTE)
         .then(res => res.json())
         .then(json => {
