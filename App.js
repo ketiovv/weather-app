@@ -40,11 +40,12 @@ export default function App() {
 
   const theme = {
     ...DefaultTheme,
-    roundness: 2,
+    roundness: 8,
     colors: {
       ...DefaultTheme.colors,
-      primary: "#3498db",
-      accent: "#f1c40f",
+      primary: "#37474f",
+      accent: "#62727b",
+      darkAccent: "#102027",
     },
   };
 
