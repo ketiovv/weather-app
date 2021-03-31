@@ -32,7 +32,7 @@ const OlderPeopleView = (props) => {
       alignContent: "center",
     },
     temperature: {
-      fontWeight: "800",
+      fontWeight: "bold",
       fontSize: 60,
       color: "#fff",
     },
@@ -52,7 +52,7 @@ const OlderPeopleView = (props) => {
       fontWeight: "500",
     },
     location: {
-      fontWeight: "800",
+      fontWeight: "bold",
       fontSize: 60,
       color: "#fff",
       marginBottom: 10,
@@ -118,6 +118,7 @@ const OlderPeopleView = (props) => {
                 backgroundColor={colors.darkAccent}
               />
             </View>
+
             <Text style={styles.description}>
               {props.shortDescription.toLowerCase() ==
               props.description.toLowerCase()
