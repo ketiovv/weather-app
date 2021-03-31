@@ -20,7 +20,7 @@ const WeatherViewContainer = (props) => {
     fetch(API_ROUTE)
       .then((res) => res.json())
       .then((json) => {
-        setTemperature(json.main.temp);
+        setTemperature(Math.round(json.main.temp * 10) / 10);
         setIsLoading(false);
         setWeatherLocation(json.name);
         setPressure(json.main.pressure);
